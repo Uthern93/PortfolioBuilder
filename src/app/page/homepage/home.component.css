@@ -1,0 +1,78 @@
+.cursor-custom {
+    cursor: url('../../../assets/circle-cursor.svg'), auto;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  #content {
+    position: relative;
+    background: url("../../../assets/background.svg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+/* start of card design */
+.custom-card {
+    background-color: #17181d;
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: none;
+    border: 2px solid #818181;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-circle {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #FF4A01; 
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step-title {
+    font-weight: 600;
+    margin-top: 8px;
+    color: #fff; 
+}
+
+.step-subtitle {
+    color: #818181; 
+    font-size: 0.85rem;
+}
+
+/* end of card design */
+
+.subtitle {
+    color: #818181; 
+}

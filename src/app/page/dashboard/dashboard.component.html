@@ -1,0 +1,83 @@
+<div class="portfolio-form">
+    <h2>Portfolio Builder</h2>
+    <form (ngSubmit)="onSubmit()" #portfolioForm="ngForm">
+
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required [(ngModel)]="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required [(ngModel)]="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="linkedin">LinkedIn Link:</label>
+        <input type="url" id="linkedin" name="linkedin" [(ngModel)]="linkedin" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="number" id="phone" name="phone" required [(ngModel)]="phone" />
+      </div>
+
+  
+
+      <div class="section">
+        <h3>Work Experience</h3>
+        <div *ngFor="let experience of workExperiences; let i = index" class="experience-group">
+          <app-dynamic-input [inputType]="'work'" [data]="experience" (remove)="removeWorkExperience(i)"></app-dynamic-input>
+        </div>
+        <button type="button" (click)="addWorkExperience()">+</button>
+      </div>
+
+      <div class="section">
+        <h3>Education</h3>
+        <div *ngFor="let education of educations; let i = index" class="education-group">
+          <app-dynamic-input [inputType]="'education'" [data]="education" (remove)="removeEducation(i)"></app-dynamic-input>
+        </div>
+        <button type="button" (click)="addEducation()">+</button>
+      </div>
+
+      <div class="section">
+        <h3>Skills</h3>
+        <div *ngFor="let skill of skills; let i = index" class="skill-group">
+          <app-dynamic-input [inputType]="'skill'" [data]="skill" (remove)="removeSkill(i)"></app-dynamic-input>
+        </div>
+        <button type="button" (click)="addSkill()">+</button>
+      </div> 
+
+      <div class="section">
+        <h3>Certificates</h3>
+        <div *ngFor="let certificate of certificates; let i = index" class="certificate-group">
+          <app-dynamic-input [inputType]="'certificate'" [data]="certificate" (remove)="removeCertificate(i)"></app-dynamic-input>
+        </div>
+        <button type="button" (click)="addCertificate()">+</button>
+      </div>
+
+      <div class="form-group modern-upload">
+        <label for="fileUpload">Upload CV (PDF/DOC)</label>
+        <div class="modern-upload-container"
+             (dragover)="$event.preventDefault()"
+             (drop)="onFileDrop($event)">
+          <input type="file" id="fileUpload" 
+                 (change)="onFileChange($event)"
+                 class="modern-upload-input"
+                 accept=".pdf,.doc,.docx" />
+          <div class="modern-upload-content">
+            <div class="modern-upload-text">
+              <p class="drag-text">Drag and drop your CV here</p>
+              <p class="browse-text">or <span>browse files</span></p>
+            </div>
+          </div>
+          <div class="upload-status" *ngIf="uploadedFileName">
+            {{ uploadedFileName }}
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!portfolioForm.form.valid">Submit</button>
+
+    </form>
+  </div>

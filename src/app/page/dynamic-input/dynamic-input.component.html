@@ -1,0 +1,25 @@
+<div class="dynamic-input">
+  <ng-container [ngSwitch]="inputType">
+
+    <div *ngSwitchCase="'work'">
+      <input type="text" placeholder="Job Title" [(ngModel)]="data.title" />
+      <input type="text" placeholder="Company" [(ngModel)]="data.company" />
+      <input type="text" placeholder="Duration" [(ngModel)]="data.duration" />
+    </div>
+
+    <div *ngSwitchCase="'education'">
+      <input type="text" placeholder="Degree" [(ngModel)]="data.level" />
+      <input type="text" placeholder="Institution" [(ngModel)]="data.institution" />
+    </div>
+
+    <div *ngSwitchCase="'skill'">
+      <input type="text" placeholder="Skill" [(ngModel)]="data" />
+    </div>
+
+    <div *ngSwitchCase="'certificate'">
+      <input type="text" placeholder="Certificate Name" [(ngModel)]="data" />
+    </div>
+    
+  </ng-container>
+  <button type="button" (click)="onRemove()">-</button>
+</div> 

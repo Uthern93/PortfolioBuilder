@@ -1,0 +1,117 @@
+<app-header></app-header>
+
+<!-- Introduction -->
+<div id="content" class="flex flex-col items-center justify-center min-h-screen p-4" 
+     [ngClass]="{'fade-in visible': isFirstVisit}">
+  
+    <div class="flex items-center justify-center p-6 fade-in" #fadeSection>
+        <div class="text-[#FF4A01] text-5xl font-bold mr-4">P</div>
+        <h1 class="text-white text-2xl font-light mt-3">Portfolio Builder</h1>
+    </div>
+
+    <div class="text-center mb-6 max-w-2xl fade-in" #fadeSection>
+        <h1 class="text-white text-3xl mb-2">
+            Showcase your skills and experience with ease! Our portfolio builder helps you create a stunning,
+            professional portfolio to highlight your achievements and impress potential clients or employers.
+        </h1>
+
+        <p class="text-base mb-4 text-gray-400">
+            Our portfolio builder is designed to help you showcase your skills and projects in a visually stunning way. 
+            With a user-friendly interface, you can easily customize your portfolio to reflect your unique style and personality.
+        </p>
+    </div>
+
+    <button class="bg-[#FF4A01] text-white font-semibold py-2 px-6 rounded hover:bg-opacity-80 transition duration-300 custom-cursor fade-in" #fadeSection>
+        Try It Now
+    </button>
+
+    <p class="text-xs mb-4 text-gray-400 fade-in" #fadeSection>No sign up required*</p>
+</div>
+
+<!-- content -->
+<div id="content2" class="flex flex-col items-center justify-center p-4 mt-8" 
+[ngClass]="{'fade-in visible': isFirstVisit}">
+
+    <div class="text-center mb-6 max-w-2xl fade-in" #fadeSection>
+    <!-- Features Section -->
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-10 max-w-4xl text-left">
+        <!-- Feature 1 -->
+        <div class="flex items-start space-x-4">
+            <img src="assets/icons/free.svg" alt="Free" class="w-10 h-10">
+            <div>
+                <h3 class="text-white text-lg font-bold">Free Forever</h3>
+                <p class="subtitle">OpenResume is created with the belief that everyone should have free and easy access to a modern professional resume design.</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex items-start space-x-4">
+            <img src="assets/icons/best-practices.svg" alt="Best Practices" class="w-10 h-10">
+            <div>
+                <h3 class="text-white text-lg font-bold">U.S. Best Practices</h3>
+                <p class="subtitle">OpenResume has built-in best practices for the U.S. job market and works well with top ATS platforms such as Greenhouse and Lever.</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex items-start space-x-4">
+            <img src="assets/icons/privacy.svg" alt="Privacy Focus" class="w-10 h-10">
+            <div>
+                <h3 class="text-white text-lg font-bold">Privacy Focus</h3>
+                <p class="subtitle">OpenResume stores data locally in your browser so only you have access to your data with complete control.</p>
+            </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex items-start space-x-4">
+            <img src="assets/icons/open-source.svg" alt="Open Source" class="w-10 h-10">
+            <div>
+                <h3 class="text-white text-lg font-bold">Open-Source</h3>
+                <p class="subtitle">OpenResume is an open-source project, and its source code can be viewed by anyone on its <a href="#" class="text-blue-600">GitHub repository</a>.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<!-- Steps/instruction -->
+<div id="content2" class="flex flex-col items-center justify-center p-4 mt-8" 
+     [ngClass]="{'fade-in visible': isFirstVisit}">
+  
+     <div class="text-center mb-6 max-w-2xl fade-in" #fadeSection>
+
+        <mat-card class="custom-card">
+            <mat-card-content class="flex flex-col items-center">
+                <h2 class="text-xl font-bold mb-10">3 Simple Steps</h2>
+                
+                <div class="grid grid-cols-3 gap-8 text-center">
+                    <!-- Step 1 -->
+                    <div class="step-item">
+                        <div class="step-circle">1</div>
+                        <p class="step-title">Add a resume pdf</p>
+                        <span class="step-subtitle">or manually fill in your details</span>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-item">
+                        <div class="step-circle">2</div>
+                        <p class="step-title">Chose the template design</p>
+                        <span class="step-subtitle">and preview the changes</span>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-item">
+                        <div class="step-circle">3</div>
+                        <p class="step-title">Download your portfolio.html</p>
+                        <span class="step-subtitle">and apply with confidence</span>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+
+</div>
+
+<app-footer></app-footer>

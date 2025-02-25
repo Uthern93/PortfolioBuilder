@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [RouterOutlet],
+  standalone: true,
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'angular-portfolio';
+export class AppComponent implements OnInit {
+  // cursorElement!: HTMLElement; 
+
+  ngOnInit() {
+    // this.cursorElement = document.getElementById('custom-cursor')!; 
+  }
+
+  // @HostListener('mousemove', ['$event'])
+  // onMouseMove(event: MouseEvent) {
+  //   console.log(`Mouse X: ${event.clientX}, Mouse Y: ${event.clientY}`);
+  //   this.cursorElement.style.transform = `translate(${event.clientX - 16}px, ${event.clientY - 16}px)`; 
+  // }
 }
