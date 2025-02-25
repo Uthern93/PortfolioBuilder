@@ -1,5 +1,7 @@
 # AngularPortfolio
 
+Portfolio Builder System is a user-friendly tool that helps you create a professional online portfolio in just a few simple steps. Upload your resume, choose from customizable templates, and generate a polished portfolio to showcase your skills and experience. Perfect for job seekers, freelancers, and professionals looking to stand out.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
 
 ## Development server
